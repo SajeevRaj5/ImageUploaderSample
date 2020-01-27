@@ -47,7 +47,8 @@ extension Requestable {
 
 extension Requestable {
     func request<T: Codable>(completion: ServiceResponseBlock<T>?) {
-        guard var components = URLComponents(string: ServiceManager.API.baseUrl?.appendingPathComponent(path).absoluteString ?? "") else { return }
+        let combinedUrl = ServiceManager.API.baseUrl?.appendingPathComponent(Configuration.cloudName)
+        guard var components = URLComponents(string: combinedUrl?.appendingPathComponent(path).absoluteString ?? "") else { return }
         
         // add parameters to url
         let urlQueryItems = parameters.map{ return URLQueryItem(name: $0.0, value: $0.1) }
@@ -58,8 +59,22 @@ extension Requestable {
         // set http method. By default, method is GET
         request.httpMethod = method.rawValue.uppercased()
         
-        request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
+        // set headers
+        for (key, value) in defaultHeaders() {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
         
         ServiceManager.shared.request(request: request, completion: completion)
+    }
+    
+    func defaultHeaders() -> [String: String] {
+        let credentialData = "\(Configuration.user):\(Configuration.password)".data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+        let base64Credentials = credentialData.base64EncodedString()
+        
+        let headers = [
+                    "Authorization": "Basic \(base64Credentials)",
+                    "Accept": "application/json",
+                    "Content-Type": "application/json" ]
+        return headers
     }
 }
