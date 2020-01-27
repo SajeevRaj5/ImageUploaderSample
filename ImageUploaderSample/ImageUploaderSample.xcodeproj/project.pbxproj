@@ -17,6 +17,12 @@
 		5E7C75C623DED10D00853682 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75C523DED10D00853682 /* GalleryViewController.swift */; };
 		5E7C75C923DED16300853682 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75C723DED16300853682 /* ImageViewCell.swift */; };
 		5E7C75CA23DED16300853682 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C75C823DED16300853682 /* ImageViewCell.xib */; };
+		5E7C75D123DED60600853682 /* GalleryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75D023DED60600853682 /* GalleryViewProtocol.swift */; };
+		5E7C75D423DEDE3E00853682 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75D323DEDE3E00853682 /* GalleryItem.swift */; };
+		5E7C75D723DEECC100853682 /* GalleryViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75D623DEECC100853682 /* GalleryViewPresenter.swift */; };
+		5E7C75DA23DEEE0200853682 /* GalleryViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75D923DEEE0200853682 /* GalleryViewInteractor.swift */; };
+		5E7C75DD23DEEE4500853682 /* GalleryViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75DC23DEEE4500853682 /* GalleryViewRouter.swift */; };
+		5E7C75E023DEEF0200853682 /* ResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75DF23DEEF0200853682 /* ResponderExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		5E7C75C523DED10D00853682 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		5E7C75C723DED16300853682 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		5E7C75C823DED16300853682 /* ImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
+		5E7C75D023DED60600853682 /* GalleryViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewProtocol.swift; sourceTree = "<group>"; };
+		5E7C75D323DEDE3E00853682 /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
+		5E7C75D623DEECC100853682 /* GalleryViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewPresenter.swift; sourceTree = "<group>"; };
+		5E7C75D923DEEE0200853682 /* GalleryViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewInteractor.swift; sourceTree = "<group>"; };
+		5E7C75DC23DEEE4500853682 /* GalleryViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewRouter.swift; sourceTree = "<group>"; };
+		5E7C75DF23DEEF0200853682 /* ResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,8 @@
 		5E7C759423DECEBE00853682 /* ImageUploaderSample */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C75DE23DEEEF000853682 /* Helper */,
+				5E7C75CE23DED5B400853682 /* Managers */,
 				5E7C75CB23DED29300853682 /* Modules */,
 				5E7C759523DECEBE00853682 /* AppDelegate.swift */,
 				5E7C759723DECEBE00853682 /* SceneDelegate.swift */,
@@ -143,6 +157,11 @@
 		5E7C75CC23DED29D00853682 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C75DB23DEEE3500853682 /* Router */,
+				5E7C75D823DEEDEB00853682 /* Interactor */,
+				5E7C75D523DEEC9F00853682 /* Presenter */,
+				5E7C75D223DED6D100853682 /* Entity */,
+				5E7C75CF23DED5D300853682 /* Protocol */,
 				5E7C75CD23DED2A800853682 /* View */,
 			);
 			path = Gallery;
@@ -156,6 +175,61 @@
 				5E7C75C823DED16300853682 /* ImageViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5E7C75CE23DED5B400853682 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5E7C75CF23DED5D300853682 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C75D023DED60600853682 /* GalleryViewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5E7C75D223DED6D100853682 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C75D323DEDE3E00853682 /* GalleryItem.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5E7C75D523DEEC9F00853682 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C75D623DEECC100853682 /* GalleryViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5E7C75D823DEEDEB00853682 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C75D923DEEE0200853682 /* GalleryViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5E7C75DB23DEEE3500853682 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C75DC23DEEE4500853682 /* GalleryViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5E7C75DE23DEEEF000853682 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C75DF23DEEF0200853682 /* ResponderExtension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +366,13 @@
 			files = (
 				5E7C75C623DED10D00853682 /* GalleryViewController.swift in Sources */,
 				5E7C759623DECEBE00853682 /* AppDelegate.swift in Sources */,
+				5E7C75D123DED60600853682 /* GalleryViewProtocol.swift in Sources */,
+				5E7C75D723DEECC100853682 /* GalleryViewPresenter.swift in Sources */,
+				5E7C75E023DEEF0200853682 /* ResponderExtension.swift in Sources */,
+				5E7C75DA23DEEE0200853682 /* GalleryViewInteractor.swift in Sources */,
 				5E7C75C923DED16300853682 /* ImageViewCell.swift in Sources */,
+				5E7C75DD23DEEE4500853682 /* GalleryViewRouter.swift in Sources */,
+				5E7C75D423DEDE3E00853682 /* GalleryItem.swift in Sources */,
 				5E7C759823DECEBE00853682 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

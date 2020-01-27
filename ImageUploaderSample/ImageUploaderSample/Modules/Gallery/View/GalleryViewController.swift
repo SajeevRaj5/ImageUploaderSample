@@ -9,13 +9,30 @@
 import UIKit
 
 class GalleryViewController: UIViewController {
+    
+    var presenter: ViewToPresenterGalleryViewProtocol?
 
     @IBOutlet weak var galleryCollectionView: UICollectionView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
 }
+
+extension GalleryViewController: PresenterToViewGalleryViewProtocol {
+    func showImages() {
+        
+    }
+    
+    func showError(error: Error) {
+        
+    }
+    
+    func dismissLoader() {
+        
+    }
+    
+}
+
