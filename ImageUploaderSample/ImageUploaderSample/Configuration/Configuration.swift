@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+class Configuration {
+    static let user = "554652571641736"
+    static let password = "j_aMCHr0oNR6riLliLXUGsqEOIU"
+}
