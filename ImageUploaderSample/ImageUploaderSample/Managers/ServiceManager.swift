@@ -48,7 +48,7 @@ class ServiceManager {
 extension ServiceManager {
     struct API {
         static var baseUrl: URL? {
-            return URL(string: "")
+            return URL(string: "https://api.cloudinary.com/v1_1/")
         }
     }
 }
