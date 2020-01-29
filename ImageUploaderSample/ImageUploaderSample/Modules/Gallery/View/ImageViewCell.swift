@@ -16,5 +16,9 @@ class ImageViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func configure(url: URL) {
+        galleryImageView?.setImage(url: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
+    }
 
 }
