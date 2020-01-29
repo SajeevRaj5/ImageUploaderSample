@@ -17,7 +17,7 @@ protocol ViewToPresenterGalleryViewProtocol {
 }
 
 protocol PresenterToViewGalleryViewProtocol: class {
-    func showImages()
+    func showImages(imageUrls: [URL])
     func showError(error: Error)
     func dismissLoader()
 }
@@ -28,7 +28,7 @@ protocol PresenterToInteractorGalleryViewProtocol {
 }
 
 protocol InteractorToPresenterGalleryViewProtocol: class {
-    func onSuccessImagesFetch(events: [GalleryItem], totalEntriesCount: Int)
+    func onSuccessImagesFetch(items: [GalleryItem])
     func onFailedImagesFetch(error: Error)
     func onServerResponseReceival()
 }

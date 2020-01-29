@@ -15,23 +15,24 @@ class GalleryViewPresenter: ViewToPresenterGalleryViewProtocol {
     var router: PresenterToRouterGalleryViewProtocol?
     
     func fetchGalleryItems() {
-        
+        interactor?.fetchImages()
     }
     
     
 }
 
 extension GalleryViewPresenter: InteractorToPresenterGalleryViewProtocol {
-    func onSuccessImagesFetch(events: [GalleryItem], totalEntriesCount: Int) {
-        
+    func onSuccessImagesFetch(items: [GalleryItem]) {
+        let urls = items.compactMap{ URL(string: $0.url ?? "") }
+        view?.showImages(imageUrls: urls)
     }
     
     func onFailedImagesFetch(error: Error) {
-        
+        view?.showError(error: error)
     }
     
     func onServerResponseReceival() {
-        
+        view?.dismissLoader()
     }
     
     
