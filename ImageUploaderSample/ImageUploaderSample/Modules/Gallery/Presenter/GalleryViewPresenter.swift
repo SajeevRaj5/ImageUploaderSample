@@ -6,9 +6,13 @@
 //  Copyright © 2020 ImageUploaderSample. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class GalleryViewPresenter: ViewToPresenterGalleryViewProtocol {
+    func uploadImageButtonTapped() {
+        interactor?.pickImage()
+    }
+    
     
     weak var view: PresenterToViewGalleryViewProtocol?
     var interactor: PresenterToInteractorGalleryViewProtocol?
@@ -22,6 +26,8 @@ class GalleryViewPresenter: ViewToPresenterGalleryViewProtocol {
 }
 
 extension GalleryViewPresenter: InteractorToPresenterGalleryViewProtocol {
+
+    
     func onSuccessImagesFetch(items: [GalleryItem]) {
         let urls = items.compactMap{ URL(string: $0.url ?? "") }
         view?.showImages(imageUrls: urls)
@@ -35,5 +41,7 @@ extension GalleryViewPresenter: InteractorToPresenterGalleryViewProtocol {
         view?.dismissLoader()
     }
     
-    
+    func pickedImage(image: UIImage) {
+        view?.selectedImage(image: image)
+    }
 }

@@ -65,5 +65,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera access required to take photo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Gallery access required to get images from gallery</string>
 </dict>
 </plist>

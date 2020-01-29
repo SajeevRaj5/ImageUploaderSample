@@ -9,6 +9,12 @@
 import Foundation
 
 class GalleryViewInteractor: PresenterToInteractorGalleryViewProtocol {
+    func pickImage() {
+        ImagePickerManager.shared.pickImage { (image) in
+            
+        }
+    }
+    
     weak var presenter: InteractorToPresenterGalleryViewProtocol?
     
     var nextIndex = ""
