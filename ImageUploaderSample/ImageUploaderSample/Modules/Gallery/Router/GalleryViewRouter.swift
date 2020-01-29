@@ -25,5 +25,4 @@ class GalleryViewRouter: PresenterToRouterGalleryViewProtocol {
         return view
     }
     
-    
 }
