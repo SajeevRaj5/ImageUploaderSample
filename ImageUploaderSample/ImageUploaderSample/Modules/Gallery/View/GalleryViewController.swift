@@ -36,8 +36,18 @@ class GalleryViewController: UIViewController {
         presenter?.fetchGalleryItems()
     }
     
+    private func addNavigationBarButton() {
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        navigationController?.navigationItem.rightBarButtonItem = add
+
+    }
+    
     private func registerCell() {
         galleryCollectionView?.register(UINib(nibName: ImageViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ImageViewCell.identifier)
+    }
+    
+    @objc func addTapped() {
+        
     }
 
 }

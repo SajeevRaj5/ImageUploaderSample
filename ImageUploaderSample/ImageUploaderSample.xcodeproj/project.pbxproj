@@ -27,6 +27,8 @@
 		5E7C75E423DEFE1C00853682 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75E323DEFE1C00853682 /* ServiceManager.swift */; };
 		5E7C75E723DEFFDA00853682 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75E623DEFFDA00853682 /* Configuration.swift */; };
 		5E7C75E923DF761C00853682 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75E823DF761C00853682 /* ImageViewExtension.swift */; };
+		5E7C75EB23E16EEC00853682 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75EA23E16EEC00853682 /* ImagePickerManager.swift */; };
+		5E7C75ED23E16F1400853682 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75EC23E16F1400853682 /* ViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		5E7C75E323DEFE1C00853682 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		5E7C75E623DEFFDA00853682 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		5E7C75E823DF761C00853682 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		5E7C75EA23E16EEC00853682 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		5E7C75EC23E16F1400853682 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 			children = (
 				5E7C75E123DEFDDA00853682 /* Requestable.swift */,
 				5E7C75E323DEFE1C00853682 /* ServiceManager.swift */,
+				5E7C75EA23E16EEC00853682 /* ImagePickerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			children = (
 				5E7C75DF23DEEF0200853682 /* ResponderExtension.swift */,
 				5E7C75E823DF761C00853682 /* ImageViewExtension.swift */,
+				5E7C75EC23E16F1400853682 /* ViewControllerExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				5E7C759623DECEBE00853682 /* AppDelegate.swift in Sources */,
 				5E7C75D123DED60600853682 /* GalleryViewProtocol.swift in Sources */,
 				5E7C75D723DEECC100853682 /* GalleryViewPresenter.swift in Sources */,
+				5E7C75ED23E16F1400853682 /* ViewControllerExtension.swift in Sources */,
 				5E7C75E023DEEF0200853682 /* ResponderExtension.swift in Sources */,
 				5E7C75DA23DEEE0200853682 /* GalleryViewInteractor.swift in Sources */,
 				5E7C75C923DED16300853682 /* ImageViewCell.swift in Sources */,
@@ -395,6 +402,7 @@
 				5E7C75E923DF761C00853682 /* ImageViewExtension.swift in Sources */,
 				5E7C75DD23DEEE4500853682 /* GalleryViewRouter.swift in Sources */,
 				5E7C75D423DEDE3E00853682 /* GalleryItem.swift in Sources */,
+				5E7C75EB23E16EEC00853682 /* ImagePickerManager.swift in Sources */,
 				5E7C75E223DEFDDA00853682 /* Requestable.swift in Sources */,
 				5E7C759823DECEBE00853682 /* SceneDelegate.swift in Sources */,
 				5E7C75E423DEFE1C00853682 /* ServiceManager.swift in Sources */,
