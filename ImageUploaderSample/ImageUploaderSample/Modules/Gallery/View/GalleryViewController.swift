@@ -32,14 +32,15 @@ class GalleryViewController: UIViewController {
 
         registerCell()
         
+        addNavigationBarButton()
+        
         isDataLoading = true
         presenter?.fetchGalleryItems()
     }
     
     private func addNavigationBarButton() {
         let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-        navigationController?.navigationItem.rightBarButtonItem = add
-
+        navigationItem.setRightBarButton(add, animated: true)
     }
     
     private func registerCell() {
@@ -47,12 +48,16 @@ class GalleryViewController: UIViewController {
     }
     
     @objc func addTapped() {
-        
+        presenter?.uploadImageButtonTapped()
     }
 
 }
 
 extension GalleryViewController: PresenterToViewGalleryViewProtocol {
+    func selectedImage(image: UIImage) {
+        
+    }
+    
     func showImages(imageUrls: [URL]) {
         self.imageUrls += imageUrls
     }
