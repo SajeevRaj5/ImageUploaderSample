@@ -6,7 +6,7 @@
 //  Copyright © 2020 ImageUploaderSample. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class GalleryItem: Codable {
     let bytes : Int?
@@ -29,22 +29,48 @@ class GalleryItem: Codable {
             }
         }
     }
+    
+    static func uploadImage(image: UIImage, completion: @escaping (UploadResponseBlock) -> ()) {
+        
+        Router.upload(image: image).uploadRequest(image: image) { (result) in
+            print(result)
+        }
+    }
+    
 }
 
 extension GalleryItem {
     enum Router: Requestable {
+        
         case images(index: String)
+        case upload(image: UIImage)
         
         var path: String {
-            return "resources/image"
+            switch self {
+            case .images:
+                return "resources/image"
+            case .upload:
+                return "image/upload"
+            }
         }
         
-        var parameters: [String : String] {
+        var parameters: [String : String]? {
             switch self {
             case .images(let nextPageIndex):
                 return ["next_cursor": nextPageIndex]
+            default: return nil
             }
         }
+        
+        var method: HTTPMethod {
+            switch self {
+            case .images:
+                return .get
+            case .upload:
+                return .post
+            }
+        }
+        
     }
 }
 
