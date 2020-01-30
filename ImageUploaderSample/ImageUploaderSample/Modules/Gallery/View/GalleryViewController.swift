@@ -54,6 +54,10 @@ class GalleryViewController: UIViewController {
 }
 
 extension GalleryViewController: PresenterToViewGalleryViewProtocol {
+    func showLoader() {
+        
+    }
+    
     func selectedImage(image: UIImage) {
         
     }
