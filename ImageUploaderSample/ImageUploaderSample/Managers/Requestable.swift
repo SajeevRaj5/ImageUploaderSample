@@ -6,7 +6,7 @@
 //  Copyright © 2020 ImageUploaderSample. All rights reserved.
 //
 
-import Foundation
+import UIKit
 enum ServiceResponse<T: Codable> {
     case success(data: T)
     case failure(error: Error)
@@ -20,13 +20,19 @@ protocol Requestable {
     var path: String { get }
     
     // required parameters
-    var parameters: [String: String] { get }
+    var parameters: [String: String]? { get }
     
     // http method
     var method: HTTPMethod { get }
+    
+    // content type
+    var contentType: ContentType { get }
         
     // request
     func request<T: Codable>(completion: ServiceResponseBlock<T>?)
+    
+    // upload request
+    func uploadRequest(image: UIImage, completion: UploadResponseBlock?)
 }
 
 extension Requestable {
@@ -36,12 +42,16 @@ extension Requestable {
         return .get
     }
     
+    var contentType: ContentType {
+        return .normal
+    }
+    
     var queryParameters: [(queryName: String, queryValue: String)]? {
         return nil
     }
     
-    var parameters: [String: String] {
-        return [:]
+    var parameters: [String: String]? {
+        return nil
     }
 }
 
@@ -51,8 +61,10 @@ extension Requestable {
         guard var components = URLComponents(string: combinedUrl?.appendingPathComponent(path).absoluteString ?? "") else { return }
         
         // add parameters to url
-        let urlQueryItems = parameters.map{ return URLQueryItem(name: $0.0, value: $0.1) }
-        components.queryItems = urlQueryItems
+        if let allParameters = parameters {
+            let urlQueryItems = allParameters.map{ return URLQueryItem(name: $0.0, value: $0.1) }
+            components.queryItems = urlQueryItems
+        }
         guard let url = components.url else { return }
         var request = URLRequest(url: url)
         
@@ -65,6 +77,51 @@ extension Requestable {
         }
         
         ServiceManager.shared.request(request: request, completion: completion)
+    }
+    
+    func uploadRequest(image: UIImage, completion: UploadResponseBlock?) {
+        guard let imageData = image.pngData() else { return }
+        let combinedUrl = ServiceManager.API.baseUrl?.appendingPathComponent(Configuration.cloudName)
+        guard var components = URLComponents(string: combinedUrl?.appendingPathComponent(path).absoluteString ?? "") else { return }
+        let clouldPresentParameters = ["upload_preset": "dkcsv4kwt"]
+        let data = buildUploadedData(withResourceData: imageData, boundaryConstant: UUID().uuidString, parameters: clouldPresentParameters)
+        
+        // add parameters to url
+        if let allParameters = parameters {
+            let urlQueryItems = allParameters.map{ return URLQueryItem(name: $0.0, value: $0.1) }
+            components.queryItems = urlQueryItems
+        }
+        guard let url = components.url else { return }
+        var request = URLRequest(url: url)
+        
+        // set http method. By default, method is GET
+        request.httpMethod = method.rawValue.uppercased()
+        
+        // set headers
+        for (key, value) in defaultHeaders() {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+        
+        ServiceManager.shared.uploadRequest(request: request, data: data, completion: completion)
+    }
+    
+    private func buildUploadedData(withResourceData resourceData: Data, boundaryConstant: String, parameters: [String: Any]) -> Data {
+        var data = Data()
+        //swiftlint:disable force_unwrapping
+        data.append("\r\n--\(boundaryConstant)\r\n".data(using: .utf8)!)
+        data.append("Content-Disposition: form-data; name=\"file\"; filename=\"file.png\"\r\n".data(using: .utf8)!)
+        data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
+        data.append(resourceData)
+        
+        for (key, value) in parameters {
+            data.append("\r\n--\(boundaryConstant)\r\n".data(using: .utf8)!)
+            data.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n\(value)".data(using: .utf8)!)
+        }
+        
+        data.append("\r\n--\(boundaryConstant)--\r\n".data(using: .utf8)!)
+        //swiftlint:enable force_unwrapping
+        
+        return data
     }
     
     func defaultHeaders() -> [String: String] {
