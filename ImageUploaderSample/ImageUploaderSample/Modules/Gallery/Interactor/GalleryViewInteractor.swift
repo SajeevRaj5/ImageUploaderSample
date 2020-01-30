@@ -6,14 +6,9 @@
 //  Copyright © 2020 ImageUploaderSample. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class GalleryViewInteractor: PresenterToInteractorGalleryViewProtocol {
-    func pickImage() {
-        ImagePickerManager.shared.pickImage { (image) in
-            
-        }
-    }
     
     weak var presenter: InteractorToPresenterGalleryViewProtocol?
     
@@ -32,6 +27,20 @@ class GalleryViewInteractor: PresenterToInteractorGalleryViewProtocol {
                 welf.presenter?.onServerResponseReceival()
             }
         }
+    }
+    
+    func pickImage() {
+        ImagePickerManager.shared.pickImage { [weak self] (image) in
+            guard let selectedImage = image else { return }
+            self?.presenter?.pickedImage(image: selectedImage)
+        }
+    }
+    
+    func uploadImage(image: UIImage) {
+        GalleryItem.uploadImage(image: image) { (response) in
+            
+        }
+            
     }
     
 }

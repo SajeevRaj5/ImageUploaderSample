@@ -42,6 +42,11 @@ extension GalleryViewPresenter: InteractorToPresenterGalleryViewProtocol {
     }
     
     func pickedImage(image: UIImage) {
-        view?.selectedImage(image: image)
+        // start uploading image
+        view?.showLoader()
+        
+        interactor?.uploadImage(image: image)
+        
+//        view?.selectedImage(image: image)
     }
 }
