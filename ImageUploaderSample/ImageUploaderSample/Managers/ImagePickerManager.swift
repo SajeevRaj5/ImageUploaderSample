@@ -82,6 +82,8 @@ extension ImagePickerManager {
             PHPhotoLibrary.requestAuthorization {(status) in
                 completionHandler(status == PHAuthorizationStatus.authorized)
             }
+        @unknown default:
+            break
         }
     }
     
@@ -132,7 +134,15 @@ extension ImagePickerManager: UIImagePickerControllerDelegate, UINavigationContr
             return
         }
         picker.dismiss(animated: true) { [weak self] in
-            self?.imageManagerCompletionHandler?(image)
+            
+            guard let imageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: ImageHandlerViewController.identifier) as? ImageHandlerViewController else { return }
+            imageViewController.image = image
+            imageViewController.cropActionHandler = { image in
+                self?.imageManagerCompletionHandler?(image)
+            }
+            imageViewController.modalPresentationStyle = .fullScreen
+            UIViewController.topMostViewController().present(imageViewController, animated: true, completion: nil)
+            
         }
     }
 }
