@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E4408B323E41802003BBB91 /* GalleryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4408B223E41802003BBB91 /* GalleryDetailRouter.swift */; };
+		5E4408B623E4184D003BBB91 /* GalleryDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4408B523E4184D003BBB91 /* GalleryDetailProtocol.swift */; };
+		5E4408B823E41B15003BBB91 /* GalleryDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4408B723E41B15003BBB91 /* GalleryDetailPresenter.swift */; };
 		5E7C759623DECEBE00853682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C759523DECEBE00853682 /* AppDelegate.swift */; };
 		5E7C759823DECEBE00853682 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C759723DECEBE00853682 /* SceneDelegate.swift */; };
 		5E7C759D23DECEBE00853682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C759B23DECEBE00853682 /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E4408B223E41802003BBB91 /* GalleryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailRouter.swift; sourceTree = "<group>"; };
+		5E4408B523E4184D003BBB91 /* GalleryDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailProtocol.swift; sourceTree = "<group>"; };
+		5E4408B723E41B15003BBB91 /* GalleryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailPresenter.swift; sourceTree = "<group>"; };
 		5E7C759223DECEBE00853682 /* ImageUploaderSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageUploaderSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7C759523DECEBE00853682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7C759723DECEBE00853682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E4408AD23E41678003BBB91 /* GalleryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5E4408B423E4182E003BBB91 /* Protocol */,
+				5E4408B123E416B5003BBB91 /* View */,
+				5E4408B023E416AB003BBB91 /* Presenter */,
+				5E4408AF23E416A0003BBB91 /* Interactor */,
+				5E4408AE23E41697003BBB91 /* Router */,
+			);
+			path = GalleryDetail;
+			sourceTree = "<group>";
+		};
+		5E4408AE23E41697003BBB91 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5E4408B223E41802003BBB91 /* GalleryDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5E4408AF23E416A0003BBB91 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5E4408B023E416AB003BBB91 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5E4408B723E41B15003BBB91 /* GalleryDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5E4408B123E416B5003BBB91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E7C75F023E1CC8100853682 /* ImageHandlerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E4408B423E4182E003BBB91 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5E4408B523E4184D003BBB91 /* GalleryDetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		5E7C758923DECEBE00853682 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				5E7C75CC23DED29D00853682 /* Gallery */,
+				5E4408AD23E41678003BBB91 /* GalleryDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -190,7 +248,6 @@
 				5E7C75C523DED10D00853682 /* GalleryViewController.swift */,
 				5E7C75C723DED16300853682 /* ImageViewCell.swift */,
 				5E7C75C823DED16300853682 /* ImageViewCell.xib */,
-				5E7C75F023E1CC8100853682 /* ImageHandlerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,11 +460,14 @@
 				5E7C75ED23E16F1400853682 /* ViewControllerExtension.swift in Sources */,
 				5E7C75E023DEEF0200853682 /* ResponderExtension.swift in Sources */,
 				5E7C75DA23DEEE0200853682 /* GalleryViewInteractor.swift in Sources */,
+				5E4408B623E4184D003BBB91 /* GalleryDetailProtocol.swift in Sources */,
 				5E7C75C923DED16300853682 /* ImageViewCell.swift in Sources */,
 				5E7C75E723DEFFDA00853682 /* Configuration.swift in Sources */,
 				5E7C75EF23E1CB5500853682 /* ImageExtension.swift in Sources */,
+				5E4408B823E41B15003BBB91 /* GalleryDetailPresenter.swift in Sources */,
 				5E7C75E923DF761C00853682 /* ImageViewExtension.swift in Sources */,
 				5E7C75DD23DEEE4500853682 /* GalleryViewRouter.swift in Sources */,
+				5E4408B323E41802003BBB91 /* GalleryDetailRouter.swift in Sources */,
 				5E7C75D423DEDE3E00853682 /* GalleryItem.swift in Sources */,
 				5E7C75EB23E16EEC00853682 /* ImagePickerManager.swift in Sources */,
 				5E7C75F123E1CC8100853682 /* ImageHandlerViewController.swift in Sources */,
