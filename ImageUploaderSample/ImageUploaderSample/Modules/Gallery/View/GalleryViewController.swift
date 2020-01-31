@@ -101,5 +101,10 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
          return CGSize(width: itemWidth, height: itemWidth)
      }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let navigation = navigationController else { return }
+        presenter?.imageSelectedAction(navigationController: navigation, selectedIndex: indexPath.row)
+    }
+    
 }
 
