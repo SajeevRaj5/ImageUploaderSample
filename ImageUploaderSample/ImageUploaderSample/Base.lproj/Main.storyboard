@@ -72,54 +72,67 @@
                                     <action selector="closeButtonAction:" destination="GZn-qF-lYb" eventType="touchUpInside" id="B3I-rs-Yae"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VG-uN-Mxe">
-                                <rect key="frame" x="177" y="822" width="60" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLy-T1-8Um">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VG-uN-Mxe">
+                                        <rect key="frame" x="177" y="5" width="60" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="2mr-jw-aFj"/>
+                                            <constraint firstAttribute="height" constant="40" id="YlR-Nh-6YP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cropButtonAction:" destination="GZn-qF-lYb" eventType="touchUpInside" id="c9F-gb-98N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-pi-v3m">
+                                        <rect key="frame" x="277" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="O7b-9R-Pq5"/>
+                                            <constraint firstAttribute="width" constant="40" id="cGm-of-mZk"/>
+                                        </constraints>
+                                        <state key="normal" image="rotate"/>
+                                        <connections>
+                                            <action selector="rotateButtonAction:" destination="GZn-qF-lYb" eventType="touchUpInside" id="ZTb-Ae-pij"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="7dh-rR-Bgi"/>
-                                    <constraint firstAttribute="height" constant="30" id="YlR-Nh-6YP"/>
+                                    <constraint firstItem="3VG-uN-Mxe" firstAttribute="centerY" secondItem="cLy-T1-8Um" secondAttribute="centerY" id="15i-oL-LbP"/>
+                                    <constraint firstItem="3VG-uN-Mxe" firstAttribute="centerX" secondItem="cLy-T1-8Um" secondAttribute="centerX" id="P5r-TJ-ld7"/>
+                                    <constraint firstAttribute="height" constant="50" id="VM4-AK-U1s"/>
+                                    <constraint firstItem="mA4-pi-v3m" firstAttribute="centerY" secondItem="cLy-T1-8Um" secondAttribute="centerY" id="lV5-rr-acu"/>
+                                    <constraint firstItem="mA4-pi-v3m" firstAttribute="leading" secondItem="3VG-uN-Mxe" secondAttribute="trailing" constant="40" id="oaI-7Y-9Uo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cropButtonAction:" destination="GZn-qF-lYb" eventType="touchUpInside" id="c9F-gb-98N"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-pi-v3m">
-                                <rect key="frame" x="277" y="812" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="O7b-9R-Pq5"/>
-                                    <constraint firstAttribute="width" constant="40" id="cGm-of-mZk"/>
-                                </constraints>
-                                <state key="normal" image="rotate"/>
-                                <connections>
-                                    <action selector="rotateButtonAction:" destination="GZn-qF-lYb" eventType="touchUpInside" id="ZTb-Ae-pij"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="cLy-T1-8Um" firstAttribute="leading" secondItem="zvE-AQ-iY1" secondAttribute="leading" id="MD3-Xg-rUq"/>
                             <constraint firstItem="zvE-AQ-iY1" firstAttribute="trailing" secondItem="E0h-NQ-s46" secondAttribute="trailing" id="TAb-EB-xaT"/>
-                            <constraint firstItem="mA4-pi-v3m" firstAttribute="bottom" secondItem="3VG-uN-Mxe" secondAttribute="bottom" id="ThL-jy-ucd"/>
-                            <constraint firstItem="3VG-uN-Mxe" firstAttribute="centerX" secondItem="3IE-go-vol" secondAttribute="centerX" id="XP3-Du-gS2"/>
+                            <constraint firstItem="cLy-T1-8Um" firstAttribute="bottom" secondItem="zvE-AQ-iY1" secondAttribute="bottom" id="WkJ-We-jjx"/>
                             <constraint firstItem="zvE-AQ-iY1" firstAttribute="trailing" secondItem="Z9J-xc-A6s" secondAttribute="trailing" constant="20" id="XlN-sa-8ds"/>
                             <constraint firstItem="E0h-NQ-s46" firstAttribute="top" secondItem="zvE-AQ-iY1" secondAttribute="top" id="gNa-XS-5iN"/>
-                            <constraint firstItem="mA4-pi-v3m" firstAttribute="leading" secondItem="3VG-uN-Mxe" secondAttribute="trailing" constant="40" id="hhW-FL-WhI"/>
                             <constraint firstItem="zvE-AQ-iY1" firstAttribute="bottom" secondItem="E0h-NQ-s46" secondAttribute="bottom" id="iOD-Pb-d6r"/>
+                            <constraint firstItem="zvE-AQ-iY1" firstAttribute="trailing" secondItem="cLy-T1-8Um" secondAttribute="trailing" id="vF8-dH-f9T"/>
                             <constraint firstItem="Z9J-xc-A6s" firstAttribute="top" secondItem="zvE-AQ-iY1" secondAttribute="top" constant="20" id="vGe-su-7DS"/>
                             <constraint firstItem="E0h-NQ-s46" firstAttribute="leading" secondItem="zvE-AQ-iY1" secondAttribute="leading" id="wjZ-CT-baf"/>
-                            <constraint firstItem="zvE-AQ-iY1" firstAttribute="bottom" secondItem="3VG-uN-Mxe" secondAttribute="bottom" constant="10" id="y65-qv-jPu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zvE-AQ-iY1"/>
                     </view>
                     <connections>
+                        <outlet property="editView" destination="cLy-T1-8Um" id="r6U-QO-zZK"/>
                         <outlet property="imageView" destination="E0h-NQ-s46" id="hrM-28-eLy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="raW-zQ-DMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="138"/>
+            <point key="canvasLocation" x="731.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
