@@ -19,7 +19,14 @@ class ImageHandlerViewController: UIViewController {
             configureView()
         }
     }
+    
+    var viewMode: ViewMode? = .normal {
+        didSet {
+            toggleEditView()
+        }
+    }
 
+    @IBOutlet weak var editView: UIView?
     @IBOutlet weak var imageView: UIImageView?
     
     override func viewDidLoad() {
@@ -30,6 +37,10 @@ class ImageHandlerViewController: UIViewController {
     
     private func configureView() {
         imageView?.image = image
+    }
+    
+    private func toggleEditView() {
+        editView?.isHidden = viewMode == .normal
     }
     
     @IBAction func closeButtonAction(_ sender: UIButton) {
@@ -47,4 +58,11 @@ class ImageHandlerViewController: UIViewController {
         cropActionHandler?(croppedImage)
     }
 
+}
+
+extension ImageHandlerViewController {
+    enum ViewMode {
+        case edit
+        case normal
+    }
 }
