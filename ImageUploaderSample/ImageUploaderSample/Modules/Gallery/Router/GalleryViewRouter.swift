@@ -9,6 +9,13 @@
 import UIKit
 
 class GalleryViewRouter: PresenterToRouterGalleryViewProtocol {
+    func showGalleryDetail(navigationController: UINavigationController, item: GalleryItem) {
+        let galleryDetailModule = GalleryDetailRouter.createModule(with: item)
+        galleryDetailModule.viewMode = .normal
+        galleryDetailModule.modalPresentationStyle = .fullScreen
+        navigationController.present(galleryDetailModule, animated: true, completion: nil)
+    }
+    
     static func createModule() -> GalleryViewController {
         guard let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: GalleryViewController.identifier) as? GalleryViewController else { return GalleryViewController() }
         
@@ -24,5 +31,6 @@ class GalleryViewRouter: PresenterToRouterGalleryViewProtocol {
         
         return view
     }
+    
     
 }

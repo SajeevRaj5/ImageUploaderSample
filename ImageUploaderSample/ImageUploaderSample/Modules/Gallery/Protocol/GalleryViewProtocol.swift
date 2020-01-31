@@ -15,6 +15,7 @@ protocol ViewToPresenterGalleryViewProtocol {
     
     func uploadImageButtonTapped()
     func fetchGalleryItems()
+    func imageSelectedAction(navigationController: UINavigationController, selectedIndex: Int)
 }
 
 protocol PresenterToViewGalleryViewProtocol: class {
@@ -42,4 +43,5 @@ protocol InteractorToPresenterGalleryViewProtocol: class {
 
 protocol PresenterToRouterGalleryViewProtocol {
     static func createModule() -> GalleryViewController
+    func showGalleryDetail(navigationController: UINavigationController, item: GalleryItem)
 }

@@ -9,26 +9,32 @@
 import UIKit
 
 class GalleryViewPresenter: ViewToPresenterGalleryViewProtocol {
-    func uploadImageButtonTapped() {
-        interactor?.pickImage()
-    }
-    
     
     weak var view: PresenterToViewGalleryViewProtocol?
     var interactor: PresenterToInteractorGalleryViewProtocol?
     var router: PresenterToRouterGalleryViewProtocol?
     
+    var galleryItems = [GalleryItem]()
+    
     func fetchGalleryItems() {
         interactor?.fetchImages()
     }
     
+    func imageSelectedAction(navigationController: UINavigationController, selectedIndex: Int) {
+        let selectedItem = galleryItems[selectedIndex]
+        router?.showGalleryDetail(navigationController: navigationController, item: selectedItem)
+    }
     
+    func uploadImageButtonTapped() {
+        interactor?.pickImage()
+    }
 }
 
 extension GalleryViewPresenter: InteractorToPresenterGalleryViewProtocol {
 
     
     func onSuccessImagesFetch(items: [GalleryItem]) {
+        galleryItems += items
         let urls = items.compactMap{ URL(string: $0.url ?? "") }
         view?.showImages(imageUrls: urls)
     }
