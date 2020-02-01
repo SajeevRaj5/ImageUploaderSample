@@ -12,14 +12,22 @@ class GalleryViewInteractor: PresenterToInteractorGalleryViewProtocol {
     
     weak var presenter: InteractorToPresenterGalleryViewProtocol?
     
-    var nextIndex = ""
+    var nextIndex: String? = ""
     
     func fetchImages() {
-        GalleryItem.getAllImages(index: nextIndex) { [weak self] (response) in
+        // when the index is nil, it means that there are no new items, hance return
+        guard let index = nextIndex else {
+            presenter?.onServerResponseReceival()
+            presenter?.onSuccessImagesFetch(items: [])
+            return
+        }
+        
+        // start fetching items
+        GalleryItem.getAllImages(index: index) { [weak self] (response) in
             guard let welf = self else { return }
             switch response {
             case .success(let result):
-                welf.nextIndex = result.nextIndex ?? ""
+                welf.nextIndex = result.nextIndex ?? nil
                 welf.presenter?.onSuccessImagesFetch(items: result.resources ?? [])
             case .failure(let error):
                 welf.presenter?.onFailedImagesFetch(error: error)
