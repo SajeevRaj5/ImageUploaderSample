@@ -30,6 +30,8 @@ class GalleryViewController: UIViewController, ActivityIndicatorPresenter {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Gallery"
 
         registerCell()
         
@@ -66,6 +68,10 @@ extension GalleryViewController: PresenterToViewGalleryViewProtocol {
     
     func showImages(imageUrls: [URL]) {
         self.imageUrls += imageUrls
+        
+        if self.imageUrls.count == 0 {
+          AlertController.show(type: .emptyError)
+        }
     }
     
     func showError(error: Error) {
