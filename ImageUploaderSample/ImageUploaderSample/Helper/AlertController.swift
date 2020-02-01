@@ -12,22 +12,26 @@ import UIKit
 class AlertController {
     enum Alert {
         case serviceError
+        case emptyError
         
         var title: String {
             switch self {
             case .serviceError: return "Service unavailable"
+            case .emptyError:   return "No Data"
             }
         }
         
         var message: String {
             switch self {
             case .serviceError: return "Something went wrong. Please try again later"
+            case .emptyError:   return "No data available to diaplay"
             }
         }
         
         var needTwoButtons: Bool {
             switch self {
             case .serviceError: return false
+            case .emptyError: return false
             }
         }
     }
