@@ -8,8 +8,9 @@
 
 import UIKit
 
-class GalleryViewController: UIViewController {
-    
+class GalleryViewController: UIViewController, ActivityIndicatorPresenter {
+    var activityIndicator = UIActivityIndicatorView()
+
     var presenter: ViewToPresenterGalleryViewProtocol?
     
     let cellsPerRow = 2
@@ -35,6 +36,7 @@ class GalleryViewController: UIViewController {
         addNavigationBarButton()
         
         isDataLoading = true
+        showActivityLoader()
         presenter?.fetchGalleryItems()
     }
     
@@ -55,7 +57,7 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController: PresenterToViewGalleryViewProtocol {
     func showLoader() {
-        
+        showActivityLoader()
     }
     
     func selectedImage(image: UIImage) {
@@ -67,11 +69,12 @@ extension GalleryViewController: PresenterToViewGalleryViewProtocol {
     }
     
     func showError(error: Error) {
-        
+        AlertController.show(type: .serviceError)
     }
     
     func dismissLoader() {
         isDataLoading = false
+        hideActivityLoader()
     }
     
 }
