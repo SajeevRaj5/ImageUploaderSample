@@ -30,10 +30,16 @@ class GalleryItem: Codable {
         }
     }
     
-    static func uploadImage(image: UIImage, completion: @escaping (UploadResponseBlock) -> ()) {
-        
-        Router.upload(image: image).uploadRequest(image: image) { (result) in
-            print(result)
+    static func uploadImage(image: UIImage, completion: @escaping (ServiceResponse<GalleryItem>) -> ()) {
+        Router.upload(image: image).request { (response: ServiceResponse<GalleryItem>) in
+            switch response {
+            case .success(let result):
+                completion(.success(data: result))
+            case .failure(let error):
+                completion(.failure(error: error))
+            case .finally:
+                completion(.finally)
+            }
         }
     }
     
@@ -54,12 +60,20 @@ extension GalleryItem {
             }
         }
         
-        var parameters: [String : String]? {
+        var parameters: [String : Any]? {
             switch self {
-            case .images(let nextPageIndex):
-                return ["next_cursor": nextPageIndex]
+            case .upload(let image):
+                return ["file": "data:image/jpg;base64,"+image.base64Value(),"upload_preset":"y8mqtnq1"]
             default: return nil
             }
+        }
+        
+        var queryParameters: [String: String]? {
+            switch self {
+              case .images(let nextPageIndex):
+                  return ["next_cursor": nextPageIndex]
+              default: return nil
+              }
         }
         
         var method: HTTPMethod {

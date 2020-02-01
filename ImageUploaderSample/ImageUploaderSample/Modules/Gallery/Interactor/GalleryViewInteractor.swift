@@ -37,8 +37,16 @@ class GalleryViewInteractor: PresenterToInteractorGalleryViewProtocol {
     }
     
     func uploadImage(image: UIImage) {
-        GalleryItem.uploadImage(image: image) { (response) in
-            
+        GalleryItem.uploadImage(image: image) { [weak self] (response) in
+            guard let welf = self else { return }
+            switch response {
+            case .success(let result):
+                welf.presenter?.onSuccessImagesFetch(items: [result] )
+            case .failure(let error):
+                welf.presenter?.onFailedImagesFetch(error: error)
+            case .finally:
+                welf.presenter?.onServerResponseReceival()
+            }
         }
             
     }

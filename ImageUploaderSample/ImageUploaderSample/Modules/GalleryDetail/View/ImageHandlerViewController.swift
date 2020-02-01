@@ -9,10 +9,12 @@
 import UIKit
 
 class ImageHandlerViewController: UIViewController {
-    typealias CropActionHandler = (UIImage) -> ()
+    typealias SaveActionHandler = (UIImage) -> ()
 
     var closeActionHandler: VoidClosure?
-    var cropActionHandler: CropActionHandler?
+    var saveActionHandler: SaveActionHandler?
+    
+    var presenter: ViewToPresenterGalleryDetailProtocol?
     
     var image: UIImage? {
         didSet {
@@ -20,7 +22,7 @@ class ImageHandlerViewController: UIViewController {
         }
     }
     
-    var viewMode: ViewMode? = .normal {
+    var viewMode: ViewMode? = .edit {
         didSet {
             toggleEditView()
         }
@@ -33,6 +35,9 @@ class ImageHandlerViewController: UIViewController {
         super.viewDidLoad()
 
         configureView()
+        toggleEditView()
+        
+        presenter?.showDetail()
     }
     
     private func configureView() {
@@ -53,9 +58,11 @@ class ImageHandlerViewController: UIViewController {
         imageView?.image = image
     }
     
-    @IBAction func cropButtonAction(_ sender: UIButton) {
-        guard let croppedImage = image else { return }
-        cropActionHandler?(croppedImage)
+    @IBAction func saveButtonAction(_ sender: UIButton) {
+        guard let originalImage = image else { return }
+        dismiss(animated: true, completion: { [weak self] in
+            self?.saveActionHandler?(originalImage)
+        })
     }
 
 }
@@ -65,4 +72,12 @@ extension ImageHandlerViewController {
         case edit
         case normal
     }
+}
+
+extension ImageHandlerViewController: PresenterToViewGalleryDetailProtocol {
+    
+    func showDetailForGallery(url: URL) {
+        imageView?.setImage(url: url)
+    }
+
 }

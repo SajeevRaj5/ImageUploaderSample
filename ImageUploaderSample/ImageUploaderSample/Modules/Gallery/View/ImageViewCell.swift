@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImageViewCell: UICollectionViewCell {
 
@@ -18,7 +19,9 @@ class ImageViewCell: UICollectionViewCell {
     }
     
     func configure(url: URL) {
-        galleryImageView?.setImage(url: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
+//        galleryImageView?.setImage(url: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
+        self.galleryImageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
+
     }
 
 }

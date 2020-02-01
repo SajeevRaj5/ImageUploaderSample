@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DCA06F68-40D3-4AC2-9DFD-779097238936"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA496733-23E6-42A2-8C2D-C6022B068388"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Modules/Gallery/Interactor/GalleryViewInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "fetchImages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA496733-23E6-42A2-8C2D-C6022B068388 - c9fba9fc4d5dadb7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImageUploaderSample.GalleryViewInteractor.fetchImages() -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/ImageUploaderSample/Modules/Gallery/Interactor/GalleryViewInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "CA496733-23E6-42A2-8C2D-C6022B068388 - 1a0ce5bf8400b576"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ImageUploaderSample.ServiceResponse&lt;ImageUploaderSample.GalleryResponse&gt;) -&gt; () in ImageUploaderSample.GalleryViewInteractor.fetchImages() -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/ImageUploaderSample/Modules/Gallery/Interactor/GalleryViewInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "211">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72928544-EDD5-4C23-9D97-2A3A74AE6A90"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Modules/Gallery/Interactor/GalleryViewInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "fetchImages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

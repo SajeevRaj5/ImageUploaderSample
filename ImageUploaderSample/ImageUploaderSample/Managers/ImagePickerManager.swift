@@ -137,7 +137,7 @@ extension ImagePickerManager: UIImagePickerControllerDelegate, UINavigationContr
             
             guard let imageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: ImageHandlerViewController.identifier) as? ImageHandlerViewController else { return }
             imageViewController.image = image
-            imageViewController.cropActionHandler = { image in
+            imageViewController.saveActionHandler = { image in
                 self?.imageManagerCompletionHandler?(image)
             }
             imageViewController.modalPresentationStyle = .fullScreen

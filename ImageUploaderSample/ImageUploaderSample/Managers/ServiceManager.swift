@@ -8,7 +8,6 @@
 
 import Foundation
 typealias ServiceResponseBlock<T: Codable> = (ServiceResponse<T>) -> ()
-typealias UploadResponseBlock = (Result<Data, Error>) -> Void
 
 class ServiceManager {
     
@@ -45,29 +44,28 @@ class ServiceManager {
         }.resume()
     }
     
-    func uploadRequest(request: URLRequest,data: Data, completion: UploadResponseBlock?) {
-        URLSession.shared.uploadTask(with: request, from: data) { (data, response, error) in
-            //  completion?(.finally)
-            
-            if let error = error {
-                completion?(.failure(error))
-                return
-            }
-            guard let _ = response, let data = data else {
-                let error = NSError(domain: "error", code: 0, userInfo: nil)
-                completion?(.failure(error))
-                return
-            }
-            
-            do {
-                completion?(.success(data))
-            }
-            catch let error {
-                print("Error", error)
-                completion?(.failure(error))
-            }
-        }.resume()
-    }
+//    func uploadRequest(request: URLRequest, completion: UploadResponseBlock?) {
+//
+//        URLSession.shared.dataTask(with: request) { (data, response, error) in
+//            if let error = error {
+//                completion?(.failure(error))
+//                return
+//            }
+//            guard let _ = response, let data = data else {
+//                let error = NSError(domain: "error", code: 0, userInfo: nil)
+//                completion?(.failure(error))
+//                return
+//            }
+//
+//            do {
+//                completion?(.success(data))
+//            }
+//            catch let error {
+//                print("Error", error)
+//                completion?(.failure(error))
+//            }
+//        }.resume()
+//    }
 }
 
 extension ServiceManager {
@@ -83,9 +81,4 @@ enum HTTPMethod: String {
     case post
     case update
     case delete
-}
-
-enum ContentType {    
-    case normal
-    case multipart(data: Data)
 }

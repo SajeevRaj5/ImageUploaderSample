@@ -53,6 +53,5 @@ extension GalleryViewPresenter: InteractorToPresenterGalleryViewProtocol {
         
         interactor?.uploadImage(image: image)
         
-//        view?.selectedImage(image: image)
     }
 }
