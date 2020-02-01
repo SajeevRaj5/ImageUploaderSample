@@ -22,6 +22,9 @@ protocol Requestable {
     // required parameters
     var parameters: [String: Any]? { get }
     
+    // query parameters
+    var queryParameters: [String: String]? { get }
+    
     // http method
     var method: HTTPMethod { get }
         
@@ -58,7 +61,7 @@ extension Requestable {
         }
         guard let url = components.url else { return }
         var request = URLRequest(url: url)
-        
+
         // set http method. By default, method is GET
         request.httpMethod = method.rawValue.uppercased()
         
@@ -79,34 +82,6 @@ extension Requestable {
         
         ServiceManager.shared.request(request: request, completion: completion)
     }
-    
-//    func uploadRequest(image: UIImage, completion: UploadResponseBlock?) {
-//        let combinedUrl = ServiceManager.API.baseUrl?.appendingPathComponent(Configuration.cloudName)
-//        guard var components = URLComponents(string: combinedUrl?.appendingPathComponent(path).absoluteString ?? "") else { return }
-//
-//        guard let url = components.url else { return }
-//        var request = URLRequest(url: url)
-////
-////        // set http method. By default, method is GET
-//        request.httpMethod = method.rawValue.uppercased()
-//
-////        // set headers
-//        for (key, value) in defaultHeaders() {
-//            request.setValue(value, forHTTPHeaderField: key)
-//        }
-//
-//        let params: [String: Any] = ["file": "data:image/jpg;base64,"+image.base64Value(),"upload_preset":"y8mqtnq1"]
-//        do {
-//            let data = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-//
-//            request.httpBody = data
-//            ServiceManager.shared.uploadRequest(request: request, completion: completion)
-//        }
-//        catch {
-//          //  throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
-//        }
-//
-//    }
     
     func defaultHeaders() -> [String: String] {
         let credentialData = "\(Configuration.user):\(Configuration.password)".data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!

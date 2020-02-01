@@ -43,29 +43,6 @@ class ServiceManager {
             }
         }.resume()
     }
-    
-//    func uploadRequest(request: URLRequest, completion: UploadResponseBlock?) {
-//
-//        URLSession.shared.dataTask(with: request) { (data, response, error) in
-//            if let error = error {
-//                completion?(.failure(error))
-//                return
-//            }
-//            guard let _ = response, let data = data else {
-//                let error = NSError(domain: "error", code: 0, userInfo: nil)
-//                completion?(.failure(error))
-//                return
-//            }
-//
-//            do {
-//                completion?(.success(data))
-//            }
-//            catch let error {
-//                print("Error", error)
-//                completion?(.failure(error))
-//            }
-//        }.resume()
-//    }
 }
 
 extension ServiceManager {

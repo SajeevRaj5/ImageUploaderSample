@@ -13,15 +13,8 @@ class ImageViewCell: UICollectionViewCell {
 
     @IBOutlet weak var galleryImageView: UIImageView?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configure(url: URL) {
-//        galleryImageView?.setImage(url: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
-        self.galleryImageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
-
+        galleryImageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
     }
 
 }

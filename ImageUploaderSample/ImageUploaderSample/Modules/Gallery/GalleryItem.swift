@@ -63,7 +63,7 @@ extension GalleryItem {
         var parameters: [String : Any]? {
             switch self {
             case .upload(let image):
-                return ["file": "data:image/jpg;base64,"+image.base64Value(),"upload_preset":"y8mqtnq1"]
+                return ["file": "data:image/jpg;base64,"+image.base64Value(),"upload_preset":Configuration.uploadPreset]
             default: return nil
             }
         }

@@ -77,7 +77,7 @@ extension ImageHandlerViewController {
 extension ImageHandlerViewController: PresenterToViewGalleryDetailProtocol {
     
     func showDetailForGallery(url: URL) {
-        imageView?.setImage(url: url)
+        imageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
     }
 
 }
