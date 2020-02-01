@@ -33,7 +33,6 @@
 		5E7C75E223DEFDDA00853682 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75E123DEFDDA00853682 /* Requestable.swift */; };
 		5E7C75E423DEFE1C00853682 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75E323DEFE1C00853682 /* ServiceManager.swift */; };
 		5E7C75E723DEFFDA00853682 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75E623DEFFDA00853682 /* Configuration.swift */; };
-		5E7C75E923DF761C00853682 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75E823DF761C00853682 /* ImageViewExtension.swift */; };
 		5E7C75EB23E16EEC00853682 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75EA23E16EEC00853682 /* ImagePickerManager.swift */; };
 		5E7C75ED23E16F1400853682 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75EC23E16F1400853682 /* ViewControllerExtension.swift */; };
 		5E7C75EF23E1CB5500853682 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75EE23E1CB5500853682 /* ImageExtension.swift */; };
@@ -93,7 +92,6 @@
 		5E7C75E123DEFDDA00853682 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		5E7C75E323DEFE1C00853682 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		5E7C75E623DEFFDA00853682 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		5E7C75E823DF761C00853682 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		5E7C75EA23E16EEC00853682 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		5E7C75EC23E16F1400853682 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		5E7C75EE23E1CB5500853682 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
@@ -340,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				5E7C75DF23DEEF0200853682 /* ResponderExtension.swift */,
-				5E7C75E823DF761C00853682 /* ImageViewExtension.swift */,
 				5E7C75EC23E16F1400853682 /* ViewControllerExtension.swift */,
 				5E7C75EE23E1CB5500853682 /* ImageExtension.swift */,
 				5E4408B923E55DD8003BBB91 /* ActivityIndicator.swift */,
@@ -620,7 +617,6 @@
 				5E7C75EF23E1CB5500853682 /* ImageExtension.swift in Sources */,
 				5E4408BC23E55DFB003BBB91 /* AlertController.swift in Sources */,
 				5E4408B823E41B15003BBB91 /* GalleryDetailPresenter.swift in Sources */,
-				5E7C75E923DF761C00853682 /* ImageViewExtension.swift in Sources */,
 				5E7C75DD23DEEE4500853682 /* GalleryViewRouter.swift in Sources */,
 				5E4408B323E41802003BBB91 /* GalleryDetailRouter.swift in Sources */,
 				5E7C75D423DEDE3E00853682 /* GalleryItem.swift in Sources */,
