@@ -42,7 +42,12 @@ class GalleryItem: Codable {
             }
         }
     }
-    
+}
+
+extension GalleryItem: Equatable {
+    static func == (lhs: GalleryItem, rhs: GalleryItem) -> Bool {
+        lhs.url == rhs.url
+    }
 }
 
 extension GalleryItem {
@@ -84,14 +89,12 @@ extension GalleryItem {
                 return .post
             }
         }
-        
     }
 }
 
 class GalleryResponse: Codable {
     let nextIndex : String?
     let resources : [GalleryItem]?
-
 
     enum CodingKeys: String, CodingKey {
         case nextIndex = "next_cursor"

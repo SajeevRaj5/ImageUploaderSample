@@ -27,7 +27,7 @@ class GalleryViewInteractor: PresenterToInteractorGalleryViewProtocol {
             guard let welf = self else { return }
             switch response {
             case .success(let result):
-                welf.nextIndex = result.nextIndex ?? nil
+                welf.nextIndex = result.nextIndex
                 welf.presenter?.onSuccessImagesFetch(items: result.resources ?? [])
             case .failure(let error):
                 welf.presenter?.onFailedImagesFetch(error: error)
@@ -56,8 +56,6 @@ class GalleryViewInteractor: PresenterToInteractorGalleryViewProtocol {
                 welf.presenter?.onServerResponseReceival()
             }
         }
-            
     }
-    
 }
 

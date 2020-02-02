@@ -1,0 +1,61 @@
+{
+  "resources": [
+    {
+      "public_id": "lptr2jdidma2zwwi7thx",
+      "format": "jpg",
+      "version": 1580658844,
+      "resource_type": "image",
+      "type": "upload",
+      "created_at": "2020-02-02T15:54:04Z",
+      "bytes": 704381,
+      "width": 2002,
+      "height": 3000,
+      "access_mode": "public",
+      "url": "http://res.cloudinary.com/dkcsv4kwt/image/upload/v1580658844/lptr2jdidma2zwwi7thx.jpg",
+      "secure_url": "https://res.cloudinary.com/dkcsv4kwt/image/upload/v1580658844/lptr2jdidma2zwwi7thx.jpg"
+    },
+    {
+      "public_id": "cwai7dwwmikocf68h5rp",
+      "format": "jpg",
+      "version": 1580640803,
+      "resource_type": "image",
+      "type": "upload",
+      "created_at": "2020-02-02T10:53:23Z",
+      "bytes": 835716,
+      "width": 4288,
+      "height": 2848,
+      "access_mode": "public",
+      "url": "http://res.cloudinary.com/dkcsv4kwt/image/upload/v1580640803/cwai7dwwmikocf68h5rp.jpg",
+      "secure_url": "https://res.cloudinary.com/dkcsv4kwt/image/upload/v1580640803/cwai7dwwmikocf68h5rp.jpg"
+    },
+    {
+      "public_id": "ousj5zyypyc5tdkkfxwy",
+      "format": "jpg",
+      "version": 1580640780,
+      "resource_type": "image",
+      "type": "upload",
+      "created_at": "2020-02-02T10:53:00Z",
+      "bytes": 692508,
+      "width": 4288,
+      "height": 2848,
+      "access_mode": "public",
+      "url": "http://res.cloudinary.com/dkcsv4kwt/image/upload/v1580640780/ousj5zyypyc5tdkkfxwy.jpg",
+      "secure_url": "https://res.cloudinary.com/dkcsv4kwt/image/upload/v1580640780/ousj5zyypyc5tdkkfxwy.jpg"
+    },
+    {
+      "public_id": "pe0fdaskzlun086ozbwm",
+      "format": "jpg",
+      "version": 1580465474,
+      "resource_type": "image",
+      "type": "upload",
+      "created_at": "2020-01-31T10:11:14Z",
+      "bytes": 17104,
+      "width": 420,
+      "height": 350,
+      "access_mode": "public",
+      "url": "http://res.cloudinary.com/dkcsv4kwt/image/upload/v1580465474/pe0fdaskzlun086ozbwm.jpg",
+      "secure_url": "https://res.cloudinary.com/dkcsv4kwt/image/upload/v1580465474/pe0fdaskzlun086ozbwm.jpg"
+    }
+  ],
+  "next_cursor": "b98ef265c348678780da2f44e581f6be4b189ab8aa6c55e858eb237c0db8bf14"
+}

@@ -49,15 +49,7 @@ class AlertController {
             alertController.addAction(cancelAction)
         }
         DispatchQueue.main.async {
-            topMostViewController().present(alertController, animated: true, completion: nil)
+            UIViewController.topMostViewController().present(alertController, animated: true, completion: nil)
         }
-    }
-    
-    static func topMostViewController() -> UIViewController {
-        var topViewController: UIViewController? = UIApplication.shared.windows.filter{$0.isKeyWindow}.first?.rootViewController
-        while ((topViewController?.presentedViewController) != nil) {
-            topViewController = topViewController?.presentedViewController
-        }
-        return topViewController!
     }
 }

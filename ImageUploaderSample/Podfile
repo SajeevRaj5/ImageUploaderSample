@@ -8,10 +8,12 @@ target 'ImageUploaderSample' do
   # Pods for ImageUploaderSample
   pod 'SDWebImage'
 
-
   target 'ImageUploaderSampleTests' do
     inherit! :search_paths
     # Pods for testing
+    
+    pod 'Nimble'
+    pod 'Quick'
   end
 
   target 'ImageUploaderSampleUITests' do
