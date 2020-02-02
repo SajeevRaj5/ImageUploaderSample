@@ -1,0 +1,16 @@
+//
+//  ImageUploaderSample.xcconfig
+//  ImageUploaderSample
+//
+//  Created by Sajeev on 2/2/20.
+//  Copyright © 2020 ImageUploaderSample. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+USER          = 315764852339698
+PASSWORD      = otu5NR3YGH27c6SXN-1YqMYXGK0
+CLOUD_NAME    = dkcsv4kwt
+UPLOAD_PRESET = y8mqtnq1

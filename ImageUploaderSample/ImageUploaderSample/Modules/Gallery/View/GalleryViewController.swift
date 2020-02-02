@@ -114,6 +114,5 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         guard let navigation = navigationController else { return }
         presenter?.imageSelectedAction(navigationController: navigation, selectedIndex: indexPath.row)
     }
-    
 }
 

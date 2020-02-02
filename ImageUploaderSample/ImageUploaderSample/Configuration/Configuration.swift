@@ -8,10 +8,30 @@
 
 import Foundation
 
-
 class Configuration {
-    static let user         = "315764852339698"
-    static let password     = "otu5NR3YGH27c6SXN-1YqMYXGK0"
-    static let cloudName    = "dkcsv4kwt"
-    static let uploadPreset = "y8mqtnq1"
+    
+    // the current singleton configuration
+    static let current = Configuration()
+    
+    // all configurations
+    private var configurations = [String: Any]()
+    
+    private init() {
+        
+        // load all configurations
+        configurations = Bundle.main.object(forInfoDictionaryKey: "Configuration") as? [String: Any] ?? [:]
+    }
+    
+    var user: String {
+        return configurations["user"] as? String ?? ""
+    }
+    var password: String {
+        return configurations["password"] as? String ?? ""
+    }
+    var cloudName: String {
+        return configurations["cloudName"] as? String ?? ""
+    }
+    var uploadPreset: String {
+        return configurations["uploadPreset"] as? String ?? ""
+    }
 }

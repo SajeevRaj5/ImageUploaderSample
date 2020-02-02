@@ -51,7 +51,7 @@ extension Requestable {
 
 extension Requestable {
     func request<T: Codable>(completion: ServiceResponseBlock<T>?) {
-        let combinedUrl = ServiceManager.API.baseUrl?.appendingPathComponent(Configuration.cloudName)
+        let combinedUrl = ServiceManager.API.baseUrl?.appendingPathComponent(Configuration.current.cloudName)
         guard var components = URLComponents(string: combinedUrl?.appendingPathComponent(path).absoluteString ?? "") else { return }
         
         // add parameters to url
@@ -84,7 +84,7 @@ extension Requestable {
     }
     
     func defaultHeaders() -> [String: String] {
-        let credentialData = "\(Configuration.user):\(Configuration.password)".data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+        let credentialData = "\(Configuration.current.user):\(Configuration.current.password)".data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
         let base64Credentials = credentialData.base64EncodedString()
         
         let headers = [

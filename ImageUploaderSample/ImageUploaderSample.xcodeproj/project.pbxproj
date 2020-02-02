@@ -19,7 +19,6 @@
 		5E7C759D23DECEBE00853682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C759B23DECEBE00853682 /* Main.storyboard */; };
 		5E7C759F23DECEC000853682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C759E23DECEC000853682 /* Assets.xcassets */; };
 		5E7C75A223DECEC000853682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7C75A023DECEC000853682 /* LaunchScreen.storyboard */; };
-		5E7C75AD23DECEC000853682 /* ImageUploaderSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75AC23DECEC000853682 /* ImageUploaderSampleTests.swift */; };
 		5E7C75B823DECEC100853682 /* ImageUploaderSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75B723DECEC100853682 /* ImageUploaderSampleUITests.swift */; };
 		5E7C75C623DED10D00853682 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75C523DED10D00853682 /* GalleryViewController.swift */; };
 		5E7C75C923DED16300853682 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C75C723DED16300853682 /* ImageViewCell.swift */; };
@@ -60,6 +59,7 @@
 /* Begin PBXFileReference section */
 		1C2FE04962BAA97CBFAAE778 /* Pods_ImageUploaderSample_ImageUploaderSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageUploaderSample_ImageUploaderSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD320F62806FD6DBD3916E9 /* Pods_ImageUploaderSampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageUploaderSampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32019FF3896D42FE57B1C15C /* Pods-ImageUploaderSample.imageuploadersample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploaderSample.imageuploadersample.xcconfig"; path = "Target Support Files/Pods-ImageUploaderSample/Pods-ImageUploaderSample.imageuploadersample.xcconfig"; sourceTree = "<group>"; };
 		41A16799B5B0E0E31F467115 /* Pods_ImageUploaderSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageUploaderSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44647A02635E0EE7A520F55E /* Pods-ImageUploaderSample-ImageUploaderSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploaderSample-ImageUploaderSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-ImageUploaderSample-ImageUploaderSampleUITests/Pods-ImageUploaderSample-ImageUploaderSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E4408B223E41802003BBB91 /* GalleryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailRouter.swift; sourceTree = "<group>"; };
@@ -67,6 +67,7 @@
 		5E4408B723E41B15003BBB91 /* GalleryDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailPresenter.swift; sourceTree = "<group>"; };
 		5E4408B923E55DD8003BBB91 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		5E4408BB23E55DFB003BBB91 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		5E4408C423E72BB6003BBB91 /* ImageUploaderSample.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ImageUploaderSample.xcconfig; sourceTree = "<group>"; };
 		5E7C759223DECEBE00853682 /* ImageUploaderSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageUploaderSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7C759523DECEBE00853682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7C759723DECEBE00853682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		5E7C75A123DECEC000853682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7C75A323DECEC000853682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E7C75A823DECEC000853682 /* ImageUploaderSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageUploaderSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E7C75AC23DECEC000853682 /* ImageUploaderSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderSampleTests.swift; sourceTree = "<group>"; };
 		5E7C75AE23DECEC000853682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E7C75B323DECEC000853682 /* ImageUploaderSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageUploaderSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7C75B723DECEC100853682 /* ImageUploaderSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploaderSampleUITests.swift; sourceTree = "<group>"; };
@@ -96,6 +96,8 @@
 		5E7C75EC23E16F1400853682 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		5E7C75EE23E1CB5500853682 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		5E7C75F023E1CC8100853682 /* ImageHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandlerViewController.swift; sourceTree = "<group>"; };
+		6B587D72657DCFA364FEB792 /* Pods-ImageUploaderSample-ImageUploaderSampleUITests.imageuploadersample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploaderSample-ImageUploaderSampleUITests.imageuploadersample.xcconfig"; path = "Target Support Files/Pods-ImageUploaderSample-ImageUploaderSampleUITests/Pods-ImageUploaderSample-ImageUploaderSampleUITests.imageuploadersample.xcconfig"; sourceTree = "<group>"; };
+		88B4AA64F097B847117D03F2 /* Pods-ImageUploaderSampleTests.imageuploadersample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploaderSampleTests.imageuploadersample.xcconfig"; path = "Target Support Files/Pods-ImageUploaderSampleTests/Pods-ImageUploaderSampleTests.imageuploadersample.xcconfig"; sourceTree = "<group>"; };
 		89495768D18FA322AB02A064 /* Pods-ImageUploaderSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploaderSampleTests.release.xcconfig"; path = "Target Support Files/Pods-ImageUploaderSampleTests/Pods-ImageUploaderSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		C6AA56E4974F18651690E5B0 /* Pods-ImageUploaderSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploaderSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageUploaderSampleTests/Pods-ImageUploaderSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F248D3B30F66E4E4E4F79F8B /* Pods-ImageUploaderSample-ImageUploaderSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageUploaderSample-ImageUploaderSampleUITests.release.xcconfig"; path = "Target Support Files/Pods-ImageUploaderSample-ImageUploaderSampleUITests/Pods-ImageUploaderSample-ImageUploaderSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +142,9 @@
 				F248D3B30F66E4E4E4F79F8B /* Pods-ImageUploaderSample-ImageUploaderSampleUITests.release.xcconfig */,
 				C6AA56E4974F18651690E5B0 /* Pods-ImageUploaderSampleTests.debug.xcconfig */,
 				89495768D18FA322AB02A064 /* Pods-ImageUploaderSampleTests.release.xcconfig */,
+				32019FF3896D42FE57B1C15C /* Pods-ImageUploaderSample.imageuploadersample.xcconfig */,
+				6B587D72657DCFA364FEB792 /* Pods-ImageUploaderSample-ImageUploaderSampleUITests.imageuploadersample.xcconfig */,
+				88B4AA64F097B847117D03F2 /* Pods-ImageUploaderSampleTests.imageuploadersample.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				5E7C759E23DECEC000853682 /* Assets.xcassets */,
 				5E7C75A023DECEC000853682 /* LaunchScreen.storyboard */,
 				5E7C75A323DECEC000853682 /* Info.plist */,
+				5E4408C423E72BB6003BBB91 /* ImageUploaderSample.xcconfig */,
 			);
 			path = ImageUploaderSample;
 			sourceTree = "<group>";
@@ -237,7 +243,6 @@
 		5E7C75AB23DECEC000853682 /* ImageUploaderSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E7C75AC23DECEC000853682 /* ImageUploaderSampleTests.swift */,
 				5E7C75AE23DECEC000853682 /* Info.plist */,
 			);
 			path = ImageUploaderSampleTests;
@@ -394,6 +399,7 @@
 				5E7C75A423DECEC000853682 /* Sources */,
 				5E7C75A523DECEC000853682 /* Frameworks */,
 				5E7C75A623DECEC000853682 /* Resources */,
+				934A336312471A5D8E75CB6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -597,6 +603,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		934A336312471A5D8E75CB6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageUploaderSampleTests/Pods-ImageUploaderSampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageUploaderSampleTests/Pods-ImageUploaderSampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageUploaderSampleTests/Pods-ImageUploaderSampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -633,7 +656,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7C75AD23DECEC000853682 /* ImageUploaderSampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,8 +702,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5E7C75BA23DECEC100853682 /* Debug */ = {
+		5E4408C523E72DEB003BBB91 /* ImageUploaderSample */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E4408C423E72BB6003BBB91 /* ImageUploaderSample.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -738,7 +761,70 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = ImageUploaderSample;
+		};
+		5E4408C623E72DEB003BBB91 /* ImageUploaderSample */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32019FF3896D42FE57B1C15C /* Pods-ImageUploaderSample.imageuploadersample.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EHNB78KN5B;
+				INFOPLIST_FILE = ImageUploaderSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ImageUploaderSample.ImageUploaderSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ImageUploaderSample;
+		};
+		5E4408C723E72DEB003BBB91 /* ImageUploaderSample */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B4AA64F097B847117D03F2 /* Pods-ImageUploaderSampleTests.imageuploadersample.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EHNB78KN5B;
+				INFOPLIST_FILE = ImageUploaderSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ImageUploaderSample.ImageUploaderSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageUploaderSample.app/ImageUploaderSample";
+			};
+			name = ImageUploaderSample;
+		};
+		5E4408C823E72DEB003BBB91 /* ImageUploaderSample */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B587D72657DCFA364FEB792 /* Pods-ImageUploaderSample-ImageUploaderSampleUITests.imageuploadersample.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EHNB78KN5B;
+				INFOPLIST_FILE = ImageUploaderSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ImageUploaderSample.ImageUploaderSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageUploaderSample;
+			};
+			name = ImageUploaderSample;
 		};
 		5E7C75BB23DECEC100853682 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -794,25 +880,6 @@
 			};
 			name = Release;
 		};
-		5E7C75BD23DECEC100853682 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9076B484391AB0D2382AA33 /* Pods-ImageUploaderSample.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EHNB78KN5B;
-				INFOPLIST_FILE = ImageUploaderSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ImageUploaderSample.ImageUploaderSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		5E7C75BE23DECEC100853682 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3D7BC861EFF3D410F4C9F02 /* Pods-ImageUploaderSample.release.xcconfig */;
@@ -831,29 +898,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
-		};
-		5E7C75C023DECEC100853682 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6AA56E4974F18651690E5B0 /* Pods-ImageUploaderSampleTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EHNB78KN5B;
-				INFOPLIST_FILE = ImageUploaderSampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ImageUploaderSample.ImageUploaderSampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageUploaderSample.app/ImageUploaderSample";
-			};
-			name = Debug;
 		};
 		5E7C75C123DECEC100853682 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -877,27 +921,6 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageUploaderSample.app/ImageUploaderSample";
 			};
 			name = Release;
-		};
-		5E7C75C323DECEC100853682 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44647A02635E0EE7A520F55E /* Pods-ImageUploaderSample-ImageUploaderSampleUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EHNB78KN5B;
-				INFOPLIST_FILE = ImageUploaderSampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ImageUploaderSample.ImageUploaderSampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ImageUploaderSample;
-			};
-			name = Debug;
 		};
 		5E7C75C423DECEC100853682 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -926,7 +949,7 @@
 		5E7C758D23DECEBE00853682 /* Build configuration list for PBXProject "ImageUploaderSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E7C75BA23DECEC100853682 /* Debug */,
+				5E4408C523E72DEB003BBB91 /* ImageUploaderSample */,
 				5E7C75BB23DECEC100853682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -935,7 +958,7 @@
 		5E7C75BC23DECEC100853682 /* Build configuration list for PBXNativeTarget "ImageUploaderSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E7C75BD23DECEC100853682 /* Debug */,
+				5E4408C623E72DEB003BBB91 /* ImageUploaderSample */,
 				5E7C75BE23DECEC100853682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -944,7 +967,7 @@
 		5E7C75BF23DECEC100853682 /* Build configuration list for PBXNativeTarget "ImageUploaderSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E7C75C023DECEC100853682 /* Debug */,
+				5E4408C723E72DEB003BBB91 /* ImageUploaderSample */,
 				5E7C75C123DECEC100853682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -953,7 +976,7 @@
 		5E7C75C223DECEC100853682 /* Build configuration list for PBXNativeTarget "ImageUploaderSampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E7C75C323DECEC100853682 /* Debug */,
+				5E4408C823E72DEB003BBB91 /* ImageUploaderSample */,
 				5E7C75C423DECEC100853682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
