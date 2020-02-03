@@ -61,11 +61,7 @@ extension GalleryViewController: PresenterToViewGalleryViewProtocol {
     func showLoader() {
         showActivityLoader()
     }
-    
-    func selectedImage(image: UIImage) {
-        
-    }
-    
+
     func showImages(imageUrls: [URL]) {
         self.imageUrls += imageUrls
         

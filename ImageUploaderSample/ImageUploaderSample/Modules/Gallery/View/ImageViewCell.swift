@@ -16,5 +16,4 @@ class ImageViewCell: UICollectionViewCell {
     func configure(url: URL) {
         galleryImageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
     }
-
 }

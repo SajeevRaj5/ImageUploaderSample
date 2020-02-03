@@ -15,6 +15,7 @@ typealias VoidClosure = () -> ()
 class ImagePickerManager: NSObject {
     // singleton
     static let shared = ImagePickerManager()
+    
     private override init() {
         // restricting initialisation from outside the file
     }

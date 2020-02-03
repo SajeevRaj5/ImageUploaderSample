@@ -31,8 +31,8 @@ extension UIImage {
         return newImage
     }
     
-    func base64Value() -> String {
-        guard let imageData = jpegData(compressionQuality: 0.5) else { return "" }
-        return imageData.base64EncodedString(options: Data.Base64EncodingOptions.init(rawValue: 3))
+    func base64Value(compressionQuality: CGFloat = 0.5) -> String {
+        guard let imageData = jpegData(compressionQuality: compressionQuality) else { return "" }
+        return imageData.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 3))
     }
 }

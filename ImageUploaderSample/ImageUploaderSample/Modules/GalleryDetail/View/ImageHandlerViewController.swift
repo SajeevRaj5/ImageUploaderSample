@@ -11,7 +11,6 @@ import UIKit
 class ImageHandlerViewController: UIViewController {
     typealias SaveActionHandler = (UIImage) -> ()
 
-    var closeActionHandler: VoidClosure?
     var saveActionHandler: SaveActionHandler?
     
     var presenter: ViewToPresenterGalleryDetailProtocol?
@@ -50,7 +49,6 @@ class ImageHandlerViewController: UIViewController {
     
     @IBAction func closeButtonAction(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        closeActionHandler?()
     }
     
     @IBAction func rotateButtonAction(_ sender: UIButton) {
@@ -79,5 +77,4 @@ extension ImageHandlerViewController: PresenterToViewGalleryDetailProtocol {
     func showDetailForGallery(url: URL) {
         imageView?.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "imagePlaceholder"))
     }
-
 }

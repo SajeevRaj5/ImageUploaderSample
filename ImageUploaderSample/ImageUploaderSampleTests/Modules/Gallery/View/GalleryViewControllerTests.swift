@@ -28,9 +28,6 @@ class GalleryViewControllerTests: QuickSpec {
             it("Should load view") {
                 expect(viewController?.title).toNot(beNil())
                 expect(viewController?.navigationItem.rightBarButtonItem).toNot(beNil())
-                expect(viewController?.showLoader())
-                
-
             }
         }
         
@@ -53,6 +50,7 @@ class GalleryViewControllerTests: QuickSpec {
                 expect(viewController?.activityIndicator.isAnimating).to(equal(false))
             }
         }
+        
         describe("Check if recived data is displayed") {
             
             beforeEach() {
@@ -72,6 +70,50 @@ class GalleryViewControllerTests: QuickSpec {
             
             it("Should refresh view") {
                 expect(viewController?.imageUrls.count).toNot(equal(0))
+            }
+        }
+        
+        describe("Add Tapped") {
+            
+            beforeEach() {
+                viewController?.addTapped()
+            }
+            
+            it("Should call upload image") {
+                expect(presenter?.didUploadImageTap).to(equal(true))
+            }
+        }
+        
+        describe("Display Error") {
+            
+            beforeEach() {
+                viewController?.showError(error: NSError(domain: "test error", code: 123, userInfo: nil))
+            }
+            
+            it("Should show error pop up") {
+                expect( UIViewController.topMostViewController()).toEventually((beAKindOf(UIViewController.self)), timeout: 10, pollInterval: 1, description: "Should display alert")
+            }
+        }
+        
+        describe("Collection view configuration") {
+            
+            it("Should be equal to row") {
+                let numberofrow = viewController?.collectionView(viewController!.galleryCollectionView!, numberOfItemsInSection: 0)
+                expect(numberofrow).to(equal(viewController!.imageUrls.count))
+            }
+        }
+        
+        describe("Collection view configuration") {
+            
+            beforeEach() {
+                viewController?.imageUrls = MockGallery.shared.galleryItems.map{ URL(string: $0.url ?? "")!}
+            }
+            
+            it("Should configure cell") {
+                
+                let cell = viewController?.collectionView(viewController!.galleryCollectionView!, cellForItemAt:  IndexPath(row: 0, section: 0)) as? ImageViewCell
+                
+                expect(cell).toNot(beNil())
             }
         }
     }

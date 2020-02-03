@@ -10,7 +10,7 @@ import Quick
 import Nimble
 @testable import ImageUploaderSample
 
-class galleryListRouterTests: QuickSpec {
+class GalleryListRouterTests: QuickSpec {
 
     override func spec() {
 

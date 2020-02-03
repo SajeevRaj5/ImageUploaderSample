@@ -20,7 +20,4 @@ class GalleryDetailRouter {
         
         return view
     }
-    
-    
 }
-

@@ -22,9 +22,7 @@ protocol PresenterToViewGalleryViewProtocol: class {
     func showImages(imageUrls: [URL])
     func showError(error: Error)
     func dismissLoader()
-    func selectedImage(image: UIImage)
     func showLoader()
-
 }
 
 protocol PresenterToInteractorGalleryViewProtocol {
