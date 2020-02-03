@@ -1,6 +1,0 @@
-framework module Pods_ImageUploaderSample_ImageUploaderSampleUITests {
-  umbrella header "Pods-ImageUploaderSample-ImageUploaderSampleUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
