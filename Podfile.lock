@@ -11,7 +11,7 @@ DEPENDENCIES:
   - SDWebImage
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Nimble
     - Quick
     - SDWebImage
@@ -23,4 +23,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3f311501a871b7a93bbaefd616df88d3a507a7d9
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.3

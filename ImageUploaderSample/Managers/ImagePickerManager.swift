@@ -97,9 +97,17 @@ extension ImagePickerManager {
         let alertController = UIAlertController(title: "Choose option", message: "", preferredStyle: .actionSheet)
 
         for option in Option.allCases {
-            let saveActionButton = UIAlertAction(title: option.listName, style: .default)
-            { [weak self] _ in
-                self?.show(type: option, from: UIViewController.topMostViewController())
+            //            let saveActionButton = UIAlertAction(title: option.listName, style: .default)
+            //            { [weak self] _ in
+            //                self?.show(type: option, from: UIViewController.topMostViewController())
+            //            }
+            
+            let saveActionButton = UIAlertAction(title: option.listName, style: .default) { [weak self] (action) in
+                self?.checkPermission(for: option, with: { (isGranted) in
+                    DispatchQueue.main.async {
+                        isGranted ? self?.show(type: option, from: UIViewController.topMostViewController()) : self?.showAccessAlert(from: UIViewController.topMostViewController())
+                    }
+                })
             }
             alertController.addAction(saveActionButton)
         }
@@ -114,18 +122,28 @@ extension ImagePickerManager {
     }
     
     func show(type: Option, from controller: UIViewController) {
-        present(parent: controller, sourceType: type.sourceType!)
+        present(parent: controller, sourceType: type.sourceType)
     }
     
     func present(parent viewController: UIViewController, sourceType: UIImagePickerController.SourceType) {
          let controller = UIImagePickerController()
          controller.delegate = self
          controller.sourceType = sourceType
-//         self.controller = controller
          DispatchQueue.main.async {
              viewController.present(controller, animated: true, completion: nil)
          }
      }
+    
+    func showAccessAlert(from viewController: UIViewController) {
+        let alert = UIAlertController(title: "Access Denied", message: "Please provide necessary access", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: {
+            (action : UIAlertAction!) -> Void in })
+
+        alert.addAction(cancelAction)
+        DispatchQueue.main.async {
+            viewController.present(alert, animated: true, completion: nil)
+        }
+    }
     
 }
 
@@ -142,8 +160,9 @@ extension ImagePickerManager: UIImagePickerControllerDelegate, UINavigationContr
                 self?.imageManagerCompletionHandler?(image)
             }
             imageViewController.modalPresentationStyle = .fullScreen
-            UIViewController.topMostViewController().present(imageViewController, animated: true, completion: nil)
-            
+            DispatchQueue.main.async {
+                UIViewController.topMostViewController().present(imageViewController, animated: true, completion: nil)
+            }
         }
     }
 }
@@ -160,7 +179,7 @@ extension ImagePickerManager {
             }
         }
         
-        var sourceType: UIImagePickerController.SourceType? {
+        var sourceType: UIImagePickerController.SourceType {
             switch self {
             case .camera: return .camera
             case .gallery: return .photoLibrary

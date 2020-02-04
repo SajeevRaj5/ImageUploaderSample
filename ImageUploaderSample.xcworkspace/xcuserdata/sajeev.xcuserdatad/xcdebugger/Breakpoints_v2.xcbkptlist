@@ -15,9 +15,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
+            endingLineNumber = "115">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,7 +30,296 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D480894-869D-4D60-A5DC-53D59BB42330"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "saveImage(image:controller:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97B28115-F886-4B4F-BC58-4C7D9BD9A324"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "checkPermission(for:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "BCC93F54-DB22-40CC-956C-5C18A783A74A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "E8646B9E-0F34-46CC-93AA-D9139F38A15C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "D2A3C073-ACF4-4C6A-AAC6-5A2AEDBED395"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FECA1F2-72D2-48F2-95F5-E4F110FC728B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "showAccessAlert(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "413D7317-9758-444D-9477-5455AC6DCEA6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "pickImage(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "413D7317-9758-444D-9477-5455AC6DCEA6 - a1a0c8b4d82615bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in ImageUploaderSample.ImagePickerManager.pickImage(completion: Swift.Optional&lt;(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/Managers/ImagePickerManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "413D7317-9758-444D-9477-5455AC6DCEA6 - 774d64d72d05d2fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in ImageUploaderSample.ImagePickerManager.pickImage(completion: Swift.Optional&lt;(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/Managers/ImagePickerManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1ABB1DA4-AE14-45D5-B382-949D633B2CC2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "pickImage(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D176BA2-C29E-4A86-9C05-1B1964635AFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "checkGalleryAccessPermission(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20DDDEF5-0F7D-4016-A9BE-58D97B9974D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "checkGalleryAccessPermission(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74DC01E5-E6A7-4B73-ADA0-03522E24DEB6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "checkGalleryAccessPermission(completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "74DC01E5-E6A7-4B73-ADA0-03522E24DEB6 - 6f0d6d373d43bb3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImageUploaderSample.ImagePickerManager.checkGalleryAccessPermission(completionHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/Managers/ImagePickerManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "74DC01E5-E6A7-4B73-ADA0-03522E24DEB6 - d34978a74dfa1469"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.PHAuthorizationStatus) -&gt; () in ImageUploaderSample.ImagePickerManager.checkGalleryAccessPermission(completionHandler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/Managers/ImagePickerManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EEFF2BD-F863-4423-AB18-03AFCB015F1B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "pickImage(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3EEFF2BD-F863-4423-AB18-03AFCB015F1B - 774d64d72d05d2fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in ImageUploaderSample.ImagePickerManager.pickImage(completion: Swift.Optional&lt;(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/Managers/ImagePickerManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "3EEFF2BD-F863-4423-AB18-03AFCB015F1B - 33af61276ce03bdc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Bool) -&gt; () in closure #1 (__C.UIAlertAction) -&gt; () in ImageUploaderSample.ImagePickerManager.pickImage(completion: Swift.Optional&lt;(Swift.Optional&lt;__C.UIImage&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ImageUploaderSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sajeev/Documents/Personal/ImageUploaderSample/ImageUploaderSample/Managers/ImagePickerManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "17823E93-659D-49DB-98DE-8B7FD85A5B3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageUploaderSample/Managers/ImagePickerManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "pickImage(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
